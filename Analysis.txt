@@ -1,0 +1,2 @@
+🎯 Project Purpose
+The purpose of the Digital Clock project is to develop a reliable and user-friendly system that accurately displays real-time information, including time, date, and optional alarm functionalities. It serves as a modern solution for time management, offering users customizable features and seamless accessibility across platforms such as desktop, mobile, or embedded devices.
