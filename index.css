@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #060a1f;
+}
+
+#clock h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+#time {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Specific Colors for Each Unit */
+.hour {
+  background-color: #ff006a;
+}
+
+.minute {
+  background-color: #1271d6;
+}
+
+.second {
+  background-color: #00c86f;
+}
