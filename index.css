@@ -1,57 +1,67 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-}
-
 body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: #060a1f;
+  height: 100vh;
 }
 
-#clock h2 {
-  color: #fff;
+#clock {
   text-align: center;
-  margin-bottom: 20px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 1em;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #a5f3fc;
 }
 
 #time {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
-  align-items: center;
 }
 
 .time-box {
-  width: 80px;
-  height: 80px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
-  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.time-box span {
+  font-size: 48px;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
 }
 
-/* Specific Colors for Each Unit */
-.hour {
-  background-color: #ff006a;
+.label {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #94a3b8;
+  letter-spacing: 1px;
 }
 
-.minute {
-  background-color: #1271d6;
+/* Reflection */
+.reflection-container {
+  margin-top: 20px;
+  transform: scaleY(-1);
+  opacity: 0.4;
+  filter: blur(2px);
+  position: relative;
 }
 
-.second {
-  background-color: #00c86f;
+.reflection-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
 }

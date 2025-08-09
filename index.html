@@ -4,15 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Clock</title>
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div id="clock">
     <h2>Time is precious</h2>
     <div id="time">
-      <div class="time-box hour"><span id="hours">00</span></div>
-      <div class="time-box minute"><span id="minutes">00</span></div>
-      <div class="time-box second"><span id="seconds">00</span></div>
+      <div class="time-box hour">
+        <span id="hours">00</span>
+        <div class="label">Hours</div>
+      </div>
+      <div class="time-box minute">
+        <span id="minutes">00</span>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="time-box second">
+        <span id="seconds">00</span>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+
+    <!-- Reflection -->
+    <div class="reflection-container">
+      <div id="reflection-time" style="display: flex; gap: 15px; justify-content: center;">
+        <div class="time-box">
+          <span id="hours-ref">00</span>
+          <div class="label">Hours</div>
+        </div>
+        <div class="time-box">
+          <span id="minutes-ref">00</span>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="time-box">
+          <span id="seconds-ref">00</span>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -26,6 +53,11 @@
       document.getElementById("hours").textContent = hours;
       document.getElementById("minutes").textContent = minutes;
       document.getElementById("seconds").textContent = seconds;
+
+      // Reflection sync
+      document.getElementById("hours-ref").textContent = hours;
+      document.getElementById("minutes-ref").textContent = minutes;
+      document.getElementById("seconds-ref").textContent = seconds;
     }
 
     setInterval(updateClock, 1000);
